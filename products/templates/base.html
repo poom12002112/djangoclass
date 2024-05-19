@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/products/css/cssreset.css">
+    <link rel="stylesheet" href="/static/products/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/products/css/style.css">
+
+    <script src="/static/products/css/bootstrap.min.js"></script>
+
+
+    <title>作品集</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid ">
+            <a class="navbar-brand logo" href="#">
+                <img src="https://raw.githubusercontent.com/hexschool/2024-camp/50f102c3d67a1e39aa4028e5c5105411ce2c3394/src/assets/images/logo.svg"
+                    alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse titlelist" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'products:home' %}">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'products:portfolio' %}">作品集</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'products:service' %}">服務項目</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'products:blog' %}">部落格</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'products:about' %}">聯絡我</a>
+                    </li>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock content %}
+
+    <footer>
+        <div class="container footer">
+            <div class="connection">
+                <div class="connection-logo"><img src="https://raw.githubusercontent.com/hexschool/2024-camp/50f102c3d67a1e39aa4028e5c5105411ce2c3394/src/assets/images/logo.svg" alt=""></div>
+                <div class="connection-text">
+                    <p>若有數位產品設計和開發相關問題 <br>
+                        歡迎填寫表單，或直接與我聯絡！</p>                    
+                    <p class="email"><a href="#">service@hexschool.com</a></p>
+                </div>
+            </div>
+            <div class="switch">
+                <div class="switch-item1"><a href="#"><img src="https://raw.githubusercontent.com/hexschool/2024-camp/50f102c3d67a1e39aa4028e5c5105411ce2c3394/src/assets/images/list.svg" alt="">填寫表單</a></div>
+                <div class="switch-item"><a href="#"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/instagram.svg" alt="">hexscool_demo</a></div>
+                <div class="switch-item"><a href="#"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/facebook.svg" alt="">hexschoolTW</a></div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
